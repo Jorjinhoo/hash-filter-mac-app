@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    background-color: #131313;
+    color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+    height: 100vh;
+}
+
+.section {
+    display: flex;
+    margin: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+    background-color: #191919;
+    border-radius: 10px;
+}
+
+.wrapper {
+    display: flex;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #191919;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+    transition: .3s;
+}
+
+.btn:hover {
+    opacity: .75;
+}
+
+
+/* add file field */
+#delete-sf-btn {
+    position: absolute;
+    margin: 100px 69px 0 69px;
+    padding: 3px 6px;
+    width: 80px;
+    font-size: 13px;
+    background-color: rgb(255, 102, 0);
+    z-index: 20;
+}
+
+#file-input-wrapper{
+    margin: 25px;
+    width: 230px;
+    height: 135px;
+    border-radius: 10px;
+}
+
+#add-file-icon {
+    transition: .3s;
+    margin-bottom: 8px;
+    background-color: transparent;
+}
+
+#fileInput-label:hover #add-file-icon {
+    font-size: 15px;
+}
+
+#fileInput-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: auto;
+    height: 135px;
+    width: 230px;
+    cursor: pointer;
+    transition: .3s;
+    background-color: #191919;
+    border: rgb(104, 103, 103) dashed 1px;
+    border-radius: 6px;
+}
+
+#fileInput-label:hover {
+    background-color: #525252;
+    border: #525252 dashed 1px;
+    font-size: 13px;
+
+}
+
+#input {
+    display: none;
+}
+
+
+/* usdt value inputs form */
+#form-wrapper {
+    flex-direction: column;
+}
+
+.usdt-value-input {
+    border: none;
+    outline: none;
+    font-family: inherit;
+    width: 170px;
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #131313;
+    transition: .3s;
+}
+
+.usdt-value-input:hover {
+    background-color: #272727;
+}
+
+.usdt-value-input:focus {
+    background-color: #272727;
+}
+
+#start-processing-btn {
+    margin: 12px 0 0 5px;
+    width: 135px;
+    font-size: 13px;
+    background-color: #5656c8;
+}
+
+
+
+/* get ready file bttn */
+#get-file-container {
+    margin-top: 10px;
+}
+
+#get-file-btn {
+    background-color: green;
+    border-radius: 13px;
+    padding: 5px 15px;
+    width: 90px;
+}
+
+#result-icon {
+    background-color: transparent;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+
+
+/* message banner */
+.message-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    padding: 15px;
+    background-color: green;
+    transition: opacity 1.2s;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.message-active-green {
+    opacity: 1;
+}
+.message-active-red {
+    background-color: red;
+    opacity: 1;
+}
+.message-hide {
+    opacity: 0;
+}
+
+
+
+/* spinner */
+.loader {
+    border: 3px solid transparent;
+    border-top: 4px solid #ffffff;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    animation: spin .3s linear infinite;
+    background-color: transparent;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
